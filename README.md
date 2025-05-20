@@ -21,7 +21,6 @@
 
 ```
 git clone https://github.com/Mrklv001/Daily_planner
-cd diary-app
 ```
 
 ### 2. Установим зависимости

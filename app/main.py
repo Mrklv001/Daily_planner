@@ -1,6 +1,5 @@
 import os
 from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI
 import markdown
 
@@ -9,7 +8,6 @@ from app import models, database, routes
 app = FastAPI()
 
 app.include_router(routes.router)
-app.mount("/static", StaticFiles(directory="static"), name="static")
 models.Base.metadata.create_all(bind=database.engine)
 
 
